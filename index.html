@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目简介</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header {
+            text-align: center;
+            padding: 6rem 2rem 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .feature-card {
+            flex: 1 1 300px;
+            max-width: 350px;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 轮播图样式 */
+        .carousel-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .carousel-slide {
+            display: flex;
+            width: 100%;
+            height: 450px;
+        }
+
+        .carousel-slide img {
+            min-width: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        #prevBtn, #nextBtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 10;
+            transition: background-color 0.3s;
+        }
+
+        #prevBtn:hover, #nextBtn:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        #prevBtn {
+            left: 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #nextBtn {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+        .carousel-dots {
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot.active {
+            background-color: var(--secondary-color);
+        }
+
+        .tech-stack {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+            
+            .carousel-slide {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Project introduce.html">项目简介</a></li>
+            <li><a href="Project video.html">项目视频</a></li>
+            <li><a href="Project detail.html">项目详细</a></li>
+        </ul>
+    </nav>
+
+    <header id="about">
+        <h1 class="project-title">观物·造境·生息</h1>
+        <p>基于软件工程技术的黎雄才故居“艺术介入”数字化模式与长效运营系统设计</p>
+    </header>
+
+    <section class="features" id="features">
+        <div class="feature-card">
+            <h3>自然语言处理</h3>
+            <p>采用最新的深度学习模型，实现自然流畅的对话交互</p>
+        </div>
+        <div class="feature-card">
+            <h3>多任务处理</h3>
+            <p>支持日程管理、信息查询、设备控制等多种功能</p>
+        </div>
+        <div class="feature-card">
+            <h3>跨平台支持</h3>
+            <p>提供Web、移动端和桌面端全平台解决方案</p>
+        </div>
+    </section>
+
+        <h2 style="text-align: center; margin-bottom: 1.5rem;">项目截图</h2>
+        <div class="carousel-container">
+             <div class="carousel-slide">
+            <img src="Images\screenshot1.jpg" alt="界面截图1">
+            <img src="Images\screenshot2.jpg" alt="界面截图2">
+            <img src="Images\screenshot3.jpg" alt="界面截图3">
+            <img src="screenshot4.jpg" alt="界面截图4">
+            <img src="screenshot5.jpg" alt="界面截图5">
+            
+        </div>
+        <button id="prevBtn">&#10094;</button>
+        <button id="nextBtn">&#10095;</button>
+    </div>
+         <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+         </div>
+
+
+    <footer>
+        <p>&copy; 2025挑战杯</p>
+    </footer>
+
+     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slide = document.querySelector('.carousel-slide');
+        const images = document.querySelectorAll('.carousel-slide img');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('.dot');
+        
+        let counter = 0;
+        const size = images[0].clientWidth;
+        const totalImages = images.length;
+        
+        // 设置初始位置
+        slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        
+        // 下一张按钮事件
+        nextBtn.addEventListener('click', () => {
+            if (counter >= totalImages - 1) {
+                // 从最后一张直接跳转到第一张
+                slide.style.transition = 'none';
+                counter = 0;
+                slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+                // 强制重绘
+                void slide.offsetWidth;
+            } else {
+                counter++;
+            }
+            // 应用过渡效果
+            slide.style.transition = 'transform 0.5s ease-in-out';
+            slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            updateDots();
+        });
+        
+        // 上一张按钮事件
+        prevBtn.addEventListener('click', () => {
+            if (counter <= 0) {
+                // 从第一张直接跳转到最后一张
+                slide.style.transition = 'none';
+                counter = totalImages - 1;
+                slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+                // 强制重绘
+                void slide.offsetWidth;
+            } else {
+                counter--;
+            }
+            // 应用过渡效果
+            slide.style.transition = 'transform 0.5s ease-in-out';
+            slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            updateDots();
+        });
+        
+        // 自动轮播
+        let interval = setInterval(() => {
+            nextBtn.click();
+        }, 5000);
+        
+        // 鼠标悬停时暂停自动轮播
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => {
+            clearInterval(interval);
+        });
+        
+        carouselContainer.addEventListener('mouseleave', () => {
+            interval = setInterval(() => {
+                nextBtn.click();
+            }, 5000);
+        });
+        
+        // 点击小圆点跳转到对应图片
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                // 取消当前过渡
+                slide.style.transition = 'none';
+                counter = index;
+                slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+                // 强制重绘
+                void slide.offsetWidth;
+                // 恢复过渡效果
+                slide.style.transition = 'transform 0.5s ease-in-out';
+                updateDots();
+            });
+        });
+        
+        // 更新小圆点状态
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === counter);
+            });
+        }
+        
+        // 响应式调整
+        window.addEventListener('resize', () => {
+            const newSize = images[0].clientWidth;
+            slide.style.transition = 'none';
+            slide.style.transform = 'translateX(' + (-newSize * counter) + 'px)';
+        });
+    });
+</script>
+</body>
+</html>

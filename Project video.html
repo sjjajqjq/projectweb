@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目视频</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header {
+            text-align: center;
+            padding: 6rem 2rem 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .project-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        .feature-card {
+            flex: 1 1 300px;
+            max-width: 350px;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-stack {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* 新增视频样式 */
+        .video-section {
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .Video_center {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Project introduce.html">项目简介</a></li>
+            <li><a href="Project video.html">项目视频</a></li> <!-- 修改链接锚点 -->
+            <li><a href="Project detail.html">项目详细</a></li>
+            <!-- 已移除项目截图链接 -->
+        </ul>
+    </nav>
+
+    <header id="about">
+        <h1 class="project-title">观物·造境·生息</h1>
+        <p>基于软件工程技术的黎雄才故居“艺术介入”数字化模式与长效运营系统设计</p>
+    </header>
+
+    <section class="features" id="features">
+       <div class="feature-card">
+            <h3>自然语言处理</h3>
+            <p>采用最新的深度学习模型，实现自然流畅的对话交互</p>
+        </div>
+        <div class="feature-card">
+            <h3>多任务处理</h3>
+            <p>支持日程管理、信息查询、设备控制等多种功能</p>
+        </div>
+        <div class="feature-card">
+            <h3>跨平台支持</h3>
+            <p>提供Web、移动端和桌面端全平台解决方案</p>
+        </div>
+    </section>
+
+    <!-- 新增视频展示区域 -->
+    <section class="video-section" id="video">
+        <div class="Video_center">
+            <video controls width="100%" height="auto" poster="Images\video-cover.jpg" preload="metadata">
+                <source src="Videos/Video_752726753920043.mp4" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                <source src="video.ogv" type="video/ogg">
+                您的浏览器不支持 HTML5 视频。
+            </video>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025挑战杯</p>
+    </footer>
+</body>
+</html>
